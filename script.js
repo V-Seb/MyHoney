@@ -1,6 +1,12 @@
 const cardsArray = [
-    'A', 'A', 'B', 'B', 'C', 'C', 'D', 'D',
-    'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'
+    'image1.jpg', 'image1.jpg', 
+    'image2.jpg', 'image2.jpg', 
+    'image3.jpg', 'image3.jpg', 
+    'image4.jpg', 'image4.jpg', 
+    'image5.jpg', 'image5.jpg', 
+    'image6.jpg', 'image6.jpg', 
+    'image7.jpg', 'image7.jpg', 
+    'image8.jpg', 'image8.jpg'
 ];
 
 let shuffledCards = [];
@@ -21,6 +27,15 @@ function createCards() {
         const card = document.createElement('div');
         card.classList.add('card');
         card.dataset.value = cardValue;
+
+        // Create an image element to be placed inside the card
+        const img = document.createElement('img');
+        img.src = `images/${cardValue}`;
+        img.classList.add('card-image');
+        img.style.display = 'none'; // Hide the image initially
+
+        card.appendChild(img);
+
         card.addEventListener('click', flipCard);
         gameGrid.appendChild(card);
     });
@@ -33,7 +48,8 @@ function flipCard(event) {
         return; // Ignore if already flipped or matched
     }
 
-    card.textContent = card.dataset.value;
+    const img = card.querySelector('.card-image');
+    img.style.display = 'block'; // Show the image when card is flipped
     card.classList.add('flipped');
     flippedCards.push(card);
 
@@ -46,8 +62,10 @@ function flipCard(event) {
 // Function to check if the flipped cards match
 function checkForMatch() {
     const [card1, card2] = flippedCards;
+    const img1 = card1.querySelector('.card-image');
+    const img2 = card2.querySelector('.card-image');
 
-    if (card1.dataset.value === card2.dataset.value) {
+    if (img1.src === img2.src) {
         // Match found
         card1.classList.add('matched');
         card2.classList.add('matched');
@@ -63,8 +81,8 @@ function checkForMatch() {
     } else {
         // No match found, flip back after a short delay
         setTimeout(() => {
-            card1.textContent = '';
-            card2.textContent = '';
+            img1.style.display = 'none';
+            img2.style.display = 'none';
             card1.classList.remove('flipped');
             card2.classList.remove('flipped');
             flippedCards = [];

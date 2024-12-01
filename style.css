@@ -1,10 +1,10 @@
-body {
+body {    
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #0cc0df;
     margin: 0;
 }
 
@@ -27,20 +27,21 @@ h1 {
 .card {
     width: 100px;
     height: 100px;
-    background-color: #3498db;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2em;
     color: transparent;
     cursor: pointer;
+    background-image: url('Images/2.jpg'); 
+    background-size: cover;
+    background-position: center;
     transition: all 0.3s;
 }
 
 .card.flipped {
     color: white;
-    background-color: #2980b9;
+    background-image: none; /* Removes the background image when the card is flipped */
 }
 
 .card.matched {
