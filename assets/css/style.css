@@ -1,12 +1,53 @@
 body {
-    background-color: powderblue;
-  }
-  h1 {
-    color: #0cc0df;
-    font-family: "Apple Chancery", cursive;
-  }
-  h2 {
-    color: #f5ae52;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-  }
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card.flipped {
+    color: white;
+    background-color: #2980b9;
+}
+
+.card.matched {
+    background-color: #2ecc71;
+    cursor: default;
+}
+
+.card:hover {
+    background-color: #2980b9;
+}
