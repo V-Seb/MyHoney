@@ -1,11 +1,11 @@
 const cardsArray = [
-    'image1.jpg', 'image1.jpg', 
-    'image2.jpg', 'image2.jpg', 
-    'image3.jpg', 'image3.jpg', 
-    'image4.jpg', 'image4.jpg', 
-    'image5.jpg', 'image5.jpg', 
-    'image6.jpg', 'image6.jpg', 
-    'image7.jpg', 'image7.jpg', 
+    'image1.jpeg', 'image1.jpeg', 
+    'image2.jpeg', 'image2.jpeg', 
+    'image3.jpeg', 'image3.jpeg', 
+    'image4.jpeg', 'image4.jpeg', 
+    'image5.jpeg', 'image5.jpeg', 
+    'image6.jpeg', 'image6.jpeg', 
+    'image7.jpeg', 'image7.jpeg', 
     'image8.jpg', 'image8.jpg'
 ];
 
