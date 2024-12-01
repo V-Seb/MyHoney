@@ -1,0 +1,12 @@
+body {
+    background-color: powderblue;
+  }
+  h1 {
+    color: #0cc0df;
+    font-family: "Apple Chancery", cursive;
+  }
+  h2 {
+    color: #f5ae52;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
